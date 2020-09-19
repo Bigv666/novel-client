@@ -1,0 +1,23 @@
+$web-width: 1200px;
+$web-color: #fff;
+$color-primary:#ff6600;
+$color-success : #67C23A;
+$color-danger: #F56C6C;
+$color-warning: #E89820;
+$color-info: #909399;
+$header-height: 70px;
+$color-border: #e6e6e6;
+@mixin web-container {
+  width: $web-width;
+  background-color: $web-color;
+  margin: auto;
+  box-sizing: border-box;
+}
+html,body {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+* {
+  box-sizing: border-box;
+}

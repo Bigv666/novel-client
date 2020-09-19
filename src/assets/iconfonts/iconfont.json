@@ -1,0 +1,79 @@
+{
+  "id": "1454264",
+  "name": "novel",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "11155054",
+      "name": "排行",
+      "font_class": "ranking",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "9332635",
+      "name": "ticket",
+      "font_class": "ticket",
+      "unicode": "e6a3",
+      "unicode_decimal": 59043
+    },
+    {
+      "icon_id": "834344",
+      "name": "prev",
+      "font_class": "prev",
+      "unicode": "e67f",
+      "unicode_decimal": 59007
+    },
+    {
+      "icon_id": "11255169",
+      "name": "chapter",
+      "font_class": "chapter",
+      "unicode": "e728",
+      "unicode_decimal": 59176
+    },
+    {
+      "icon_id": "9214554",
+      "name": "present",
+      "font_class": "present",
+      "unicode": "e621",
+      "unicode_decimal": 58913
+    },
+    {
+      "icon_id": "1623128",
+      "name": "next",
+      "font_class": "next",
+      "unicode": "e62e",
+      "unicode_decimal": 58926
+    },
+    {
+      "icon_id": "4886237",
+      "name": "setting",
+      "font_class": "setting",
+      "unicode": "e65a",
+      "unicode_decimal": 58970
+    },
+    {
+      "icon_id": "7024992",
+      "name": "book",
+      "font_class": "stack",
+      "unicode": "e63e",
+      "unicode_decimal": 58942
+    },
+    {
+      "icon_id": "1270244",
+      "name": "icon_praise",
+      "font_class": "zan",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "1487392",
+      "name": "comment",
+      "font_class": "comment",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    }
+  ]
+}
