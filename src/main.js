@@ -4,6 +4,7 @@ import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
 import api from '@/api'
+import './permission'
 import '@/theme/element-variables.scss'
 import 'element-ui/lib/theme-chalk/display.css'
 // fade/zoom 等

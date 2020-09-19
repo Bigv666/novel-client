@@ -65,8 +65,12 @@ export default {
       height: 30px;
       line-height: 30px;
     }
+    .el-menu--horizontal > .el-menu-item:hover {
+      color: $color-primary;
+    }
     .el-menu--horizontal > .el-menu-item.is-active {
       color: $color-primary;
+      border-color: transparent;
     }
   }
 }
