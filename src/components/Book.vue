@@ -23,6 +23,58 @@
       <router-link :to="{path: '/author'}" class="book-author">{{data.author.nickname}}</router-link>
     </div>
   </div>
+  <div class="book-wrappe pop" v-else-if="mode == 'pop'">
+    <div class="book-image-wrapper">
+       <el-popover placement="top" width="400" trigger="hover">
+              <section>
+                <el-row>
+                  <el-col :span="7">
+                    <el-image style="width: 100px; height: 120px;" :src="$domain +data.image"></el-image>
+                  </el-col>
+                  <el-col :span="17">
+                    <el-col>
+                      <el-link @click.native="linkToBook(data._id)">{{
+                        data.name
+                      }}</el-link>
+                    </el-col>
+                    <el-col>
+                      <el-link @click="linkToAuthor(data.author.user_id)">{{
+                        data.author.nickname
+                      }}</el-link>
+                    </el-col>
+                    <el-col>
+                      <p class="description">{{ data.description }}</p>
+                    </el-col>
+                    <el-col class="align-center">
+                      <el-col :span="6">
+                        <p>阅读数</p>
+                        <p>{{ data.book_data.read ? data.book_data.read : 0 }}</p>
+                      </el-col>
+                      <el-col :span="6">
+                        <p>推荐数</p>
+                        <p>{{ data.book_data.recommend ? data.book_data.recommend : 0 }}</p>
+                      </el-col>
+                      <el-col :span="6">
+                        <p>收藏数</p>
+                        <p>{{ data.book_data.collect ? data.book_data.collect : 0 }}</p>
+                      </el-col>
+                      <el-col :span="6">
+                        <p>搜索数</p>
+                        <p>{{ data.book_data.search ? data.book_data.search : 0 }}</p>
+                      </el-col>
+                    </el-col>
+                  </el-col>
+                </el-row>
+              </section>
+              <div class="boy-item" slot="reference">
+                      <el-image
+                      :src="$domain + data.image"
+                      class="book-image"
+                    ></el-image>
+              </div>
+            </el-popover>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -148,5 +200,34 @@ $image-height: 200px;
       }
     }
   }
+  // pop
+  &.pop {
+    border: 1px solid $color-border;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    &:hover {
+      box-shadow: 0 0 5px 0 #e6e6e6;
+      .book-name-wrapper {
+        bottom: 0;
+      }
+    }
+    .book-image-wrapper {
+      width: $image-width;
+      height: $image-height;
+      overflow: hidden;
+    }
+    .book-image {
+      width: 100%;
+      height: 100%;
+      transition: all 0.3s ease;
+    }
+  }
 }
+.description {
+      font-size: 13px;
+      color: #666;
+      max-height: 5.5em;
+      overflow: hidden;
+    }
 </style>

@@ -21,4 +21,54 @@
   overflow-x: hidden;
   .el-scrollbar__wrap{overflow-x: hidden;}
 }
+.flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+.flex-col-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+.color-primary {
+  color: #FF933A;
+}
+.color-success {
+  color: #67C23A;
+}
+.color-danger {
+  color: #F56C6C;
+}
+.color-warning {
+  color: #E89820;
+}
+.color-info {
+  color: #909399;
+}
+.scrollbar-no-x {
+
+    overflow-x: hidden !important;
+}
 </style>

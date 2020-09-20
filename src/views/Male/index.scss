@@ -1,0 +1,15 @@
+.ranking-wrapper {
+  display: flex;
+  padding: 20px 0;
+  background-color: #f2fcfe;
+  text-align: center;
+}
+.ranking-content {
+  flex: 1;
+  padding: 20px;
+  text-align: left;
+  color: #666;
+}
+.ranking-description {
+  min-height: 8em;
+}
