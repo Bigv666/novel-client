@@ -80,7 +80,7 @@ export default {
   border-bottom: 1px solid $color-border;
 }
 .footer-item.link {
-  width: 800px;
+  width: 700px;
 }
 .footer-item-label {
   color: $color-primary;

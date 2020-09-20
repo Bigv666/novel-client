@@ -17,6 +17,54 @@ const routes = [
         meta: {
           title: '首页'
         }
+      },
+      {
+        path: '/male',
+        name: 'male',
+        component: () => import('@/views/Male/index.vue'),
+        meta: {
+          title: '男频'
+        }
+      },
+      {
+        path: '/female',
+        name: 'female',
+        component: () => import('@/views/Female/index.vue'),
+        meta: {
+          title: '女频'
+        }
+      },
+      {
+        path: '/stock',
+        name: 'stock',
+        component: () => import('@/views/Stock/index.vue'),
+        meta: {
+          title: '书库'
+        }
+      },
+      {
+        path: '/rank',
+        name: 'rank',
+        component: () => import('@/views/Rank/index.vue'),
+        meta: {
+          title: '排行榜'
+        }
+      },
+      {
+        path: '/book',
+        name: 'book',
+        component: () => import('@/views/Book/index.vue'),
+        meta: {
+          title: '书籍详情'
+        }
+      },
+      {
+        path: '/author',
+        name: 'author',
+        component: () => import('@/views/Author/index.vue'),
+        meta: {
+          title: '作者'
+        }
       }
     ]
   }

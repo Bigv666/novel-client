@@ -1,0 +1,56 @@
+@import '@/style/common.scss';
+.index-wrapper {
+  // height: 2000px;
+}
+.el-carousel__item {
+  height: 600px;
+}
+.swiper-item {
+  width: 100%;
+}
+.ad-image {
+  width: 100%;
+  margin: 20px 0;
+}
+
+
+// 七日强推
+.seven-wrapper {
+  // background: #12c2e9;  /* fallback for old browsers */
+// background: -webkit-linear-gradient(to right, #f64f59, #c471ed, #12c2e9);  /* Chrome 10-25, Safari 5.1-6 */
+// background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+// height: 700px;
+.seven-swiper {
+  // width: 800px;
+  padding: 20px;
+  text-align: center;
+}
+::v-deep .el-carousel__indicator.is-active button {
+	width: 25px;
+	border-radius: 4px;
+}
+
+::v-deep .el-carousel__button {
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+}
+
+.ranking-item {
+	height: 440px;
+}
+
+.ranking-date {
+	margin: 0;
+	font-size: 24px;
+}
+
+.ranking-description {
+	height: 4em;
+	font-size: 0.9em;
+	color: #333;
+	line-height: 1.4em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+}

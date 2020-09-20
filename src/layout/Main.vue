@@ -2,7 +2,9 @@
     <div class="main-wrapper">
       <Header></Header>
       <Loading v-if="loading"></Loading>
-      <router-view></router-view>
+      <div class="main-content">
+        <router-view></router-view>
+      </div>
       <Footer></Footer>
     </div>
 </template>
@@ -24,6 +26,9 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+@import '@/style/common.scss';
+.main-content {
+  min-height: calc(100vh - #{$header-height});
+}
 </style>

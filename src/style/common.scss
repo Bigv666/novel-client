@@ -1,4 +1,4 @@
-$web-width: 1200px;
+$web-width: 1100px;
 $web-color: #fff;
 $color-primary:#ff6600;
 $color-success : #67C23A;
@@ -20,4 +20,8 @@ html,body {
 }
 * {
   box-sizing: border-box;
+}
+.container {
+  width: $web-width;
+  margin: auto;
 }
