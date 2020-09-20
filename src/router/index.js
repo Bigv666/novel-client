@@ -75,6 +75,71 @@ const routes = [
         meta: {
           title: '阅读'
         }
+      },
+      {
+        path: '/user',
+        name: 'user',
+        redirect: '/user/index',
+        component: () => import('@/views/User/index.vue'),
+        meta: {
+          title: '个人中心'
+        },
+        children: [
+          {
+            path: '/user/index',
+            name: 'user',
+            component: () => import('@/views/User/children/index.vue')
+          },
+          {
+            path: '/user/stack',
+            name: 'userStack',
+            component: () => import('@/views/User/children/stack.vue')
+          },
+          {
+            path: '/user/history',
+            name: 'userHistory',
+            component: () => import('@/views/User/children/history.vue')
+          },
+          {
+            path: '/user/comment',
+            name: 'userComment',
+            component: () => import('@/views/User/children/comment.vue')
+          },
+          {
+            path: '/user/message',
+            name: 'userMessage',
+            component: () => import('@/views/User/children/message.vue')
+          },
+          {
+            path: '/user/password',
+            name: 'userPassword',
+            component: () => import('@/views/User/children/password.vue')
+          }
+        ]
+      },
+      {
+        path: '/recharge',
+        name: 'recharge',
+        component: () => import('@/views/Recharge/index.vue'),
+        meta: {
+          title: '充值'
+        }
+      },
+      {
+        path: '/consume',
+        name: 'consume',
+        component: () => import('@/views/Consume/index.vue'),
+        meta: {
+          title: '消费'
+        }
+      },
+      {
+        path: '/search/:keywords?',
+        name: 'search',
+        component: () => import('@/views/Search/index.vue'),
+        meta: {
+          title: '搜索'
+        }
       }
     ]
   }

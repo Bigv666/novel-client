@@ -38,7 +38,7 @@ export default {
     }
   },
   created () {
-    const bookId = this.$route.params.bookId
+    const bookId = this.$route.params.id
     this.commentForm.book_id = bookId
     this.form.book_id = bookId
     // this.getUserInfo();

@@ -87,7 +87,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['isLogin', '$domain'])
+    ...mapGetters(['isLogin'])
   },
   created () {
     this.form.book_id = this.book_id || this.$parent.book_id

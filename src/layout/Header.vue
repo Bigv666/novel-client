@@ -12,7 +12,7 @@
           <el-menu-item index="/stock">书库</el-menu-item>
           <el-menu-item index="/rank">排行榜</el-menu-item>
           <el-menu-item>
-            <el-input placeholder="请输入作品名/作者/类型" class="search-input"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
+            <el-input placeholder="请输入作品名/作者/类型" clearable v-model="search" @keydown.enter.native="handleSearch" class="search-input"><i slot="prefix" class="el-input__icon el-icon-search"></i></el-input>
           </el-menu-item>
         </el-menu>
       </div>
@@ -26,12 +26,12 @@
           <el-icon name="bell" style="font-size:24px;"></el-icon>
         </el-badge>
         </div>
-        <el-dropdown trigger="click">
+        <el-dropdown trigger="click" @command="handleCommand">
             <el-avatar :src="$domain+avatar" alt="" />
             <el-dropdown-menu slot="dropdown">
-              <el-dropdown-item icon="el-icon-user-solid">个人中心</el-dropdown-item>
-              <el-dropdown-item icon="el-icon-s-order">消费记录</el-dropdown-item>
-              <el-dropdown-item icon="el-icon-switch-button" divider>登出</el-dropdown-item>
+              <el-dropdown-item icon="el-icon-user-solid" command="user">个人中心</el-dropdown-item>
+              <el-dropdown-item icon="el-icon-s-order" command="consume">消费记录</el-dropdown-item>
+              <el-dropdown-item icon="el-icon-switch-button" command="logout" divided>登出</el-dropdown-item>
             </el-dropdown-menu>
           </el-dropdown>
       </div>
@@ -107,6 +107,13 @@ export default {
     await this.getUserInfo()
     console.log(this.isLogin)
   },
+  watch: {
+    '$route.path': function (newVal) {
+      if (newVal !== '/search') {
+        this.search = ''
+      }
+    }
+  },
   computed: {
     ...mapGetters(['nickname', 'isLogin', 'avatar']),
     getCodeStatus () {
@@ -127,6 +134,19 @@ export default {
     }
   },
   methods: {
+    async handleCommand (cmd) {
+      console.log(cmd)
+      if (cmd === 'user') {
+        this.$router.push({ name: 'user' })
+      }
+      if (cmd === 'consume') {
+        this.$router.push({ name: 'consume' })
+      }
+      if (cmd === 'logout') {
+        await this.$store.dispatch('user/logout')
+        this.$router.go(0)
+      }
+    },
     // 获取验证码
     getPhoneCode () {
       this.timer = setInterval(() => {
@@ -217,6 +237,9 @@ export default {
     afterClose () {
       console.log(this.loginForm)
       this.resetData()
+    },
+    handleSearch () {
+      this.$router.push({ path: 'search', query: { keywords: this.search } })
     }
   }
 }
