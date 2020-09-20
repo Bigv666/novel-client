@@ -37,7 +37,7 @@
       </div>
     </div>
     <!-- 登录注册弹窗 -->
-    <el-dialog width="350px" :visible.sync="dialogVisible" :title="type === 'login' ? '登录' : '注册'" @closed="afterClose" top="20vh" class="form_wrapper" :close-on-click-modal="false" :close-on-press-escape="false">
+    <el-dialog width="350px"  :modal-append-to-body='false' :visible.sync="dialogVisible" :title="type === 'login' ? '登录' : '注册'" @closed="afterClose" top="20vh" class="form_wrapper" :close-on-click-modal="false" :close-on-press-escape="false">
       <Login v-if="type === 'login'"></Login>
       <Register v-else></Register>
       <div slot="footer">
