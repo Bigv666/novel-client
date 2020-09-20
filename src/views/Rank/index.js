@@ -17,7 +17,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['imageDomain'])
+    // ...mapGetters(['$domain'])
   },
   created () {
     this.getRankingList()
@@ -54,7 +54,7 @@ export default {
       this.$router.push({
         name: 'book',
         params: {
-          bookId: bookId
+          id: bookId
         }
       })
     },

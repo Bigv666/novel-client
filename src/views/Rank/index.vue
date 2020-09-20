@@ -31,7 +31,7 @@
               <el-card v-for="item in bookData" :key="item._id" shadow="hover" class="list-item">
                 <div class="flex">
                   <div class="item-image ">
-                    <el-image :src="imageDomain + item.book.image" style="width: 150px; height: 180px" fit="fill"></el-image>
+                    <el-image :src="$domain + item.book.image" style="width: 150px; height: 180px" fit="fill"></el-image>
                     <i class="iconfont iconranking color-primary"></i>
                     <span class="item-rank">{{item.rank}}</span>
                   </div>
@@ -84,8 +84,6 @@
         <div class="rule-flex"><span class="rule-label">完结周榜:</span><span>完结时间小于三个月，本周积分排行</span></div>
         <div class="rule-flex"><span class="rule-label">完结月榜:</span><span>完结时间小于三个月，本月积分排行</span></div>
       </el-dialog>
-      <!-- 返回顶部 -->
-      <el-backtop></el-backtop>
   </div>
 </template>
 

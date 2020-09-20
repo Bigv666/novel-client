@@ -75,7 +75,7 @@ export default {
     }
   },
   computed: {
-    ...mapGetters(['imageDomain', 'kindOptions']),
+    ...mapGetters(['kindOptions']),
     generateType () {
       let result = [{ label: '全部', value: '' }]
       if (this.kindOptions) {
@@ -121,7 +121,7 @@ export default {
       this.$router.push({
         name: 'book',
         params: {
-          bookId
+          id: bookId
         }
       })
     },

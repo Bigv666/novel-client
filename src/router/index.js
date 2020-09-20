@@ -51,27 +51,41 @@ const routes = [
         }
       },
       {
-        path: '/book',
+        path: '/book/:id',
         name: 'book',
+        props: true,
         component: () => import('@/views/Book/index.vue'),
         meta: {
           title: '书籍详情'
         }
       },
       {
-        path: '/author',
+        path: '/author/:id',
         name: 'author',
+        props: true,
         component: () => import('@/views/Author/index.vue'),
         meta: {
           title: '作者'
+        }
+      },
+      {
+        path: '/read',
+        name: 'read',
+        component: () => import('@/views/Read/index.vue'),
+        meta: {
+          title: '阅读'
         }
       }
     ]
   }
 ]
+const createRouter = () =>
+  new VueRouter({
+    // mode: 'history', // require service support
+    scrollBehavior: () => ({ y: 0 }),
+    routes: routes
+  })
 
-const router = new VueRouter({
-  routes
-})
+const router = createRouter()
 
 export default router

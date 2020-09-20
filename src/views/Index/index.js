@@ -41,7 +41,7 @@ export default {
     window.addEventListener('resize', this.setSize, false)
   },
   computed: {
-    ...mapGetters(['imageDomain'])
+    // ...mapGetters(['$'])
   },
   methods: {
     setSize () {
@@ -101,7 +101,7 @@ export default {
       this.$router.push({
         name: 'book',
         params: {
-          bookId
+          id: bookId
         }
       })
     },

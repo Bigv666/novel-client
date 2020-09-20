@@ -34,23 +34,7 @@
       <div class="center_result" v-if="resultData.length !== 0">
         <el-row :gutter="20">
           <el-col :span="6" style="margin:5px 0" v-for="item in resultData" :key="item._id" @click="linkToBook(item._id)">
-            <div class="result-item my-card" @click="linkToBook(item._id)">
-              <div class="flex">
-                <el-image :src="$domain + item.image" style="width: 100px; height: 120px" fit="fill">
-                  <div slot="error" class="image-slot">
-                    <el-image :src="$domain + 'public/assets/404.jpg'"></el-image>
-                  </div>
-                </el-image>
-                <div class="flex-col pl-10">
-                  <el-link class="mb-5 text-ellipsis">{{ item.name }}</el-link>
-                  <el-link class="mb-5 text-ellipsis" @click.stop="linkToAuthor(item.author.user_id)">{{ item.author.nickname }}</el-link>
-                  <el-tag size="small" class="mb-5">{{ item.type }}</el-tag>
-                  <el-tag type="success" size="small" v-if="item.status === 0">连载中</el-tag>
-                  <el-tag type="danger" size="small" v-if="item.status === 1">完结</el-tag>
-                </div>
-              </div>
-              <p class="item-description">{{ item.description }}</p>
-            </div>
+            <Book :data="item" mode="card"></Book>
           </el-col>
         </el-row>
       </div>
@@ -117,18 +101,5 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-}
-.my-card {
-  padding: 20px;
-  border-radius: 4px;
-  border: 1px solid #ebeef5;
-  background-color: #ffffff;
-  overflow: hidden;
-  color: #303133;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-.my-card:hover {
-  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
 }
 </style>

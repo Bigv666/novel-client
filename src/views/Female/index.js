@@ -19,7 +19,7 @@ export default {
     this.getUpdateCatalogs()
   },
   computed: {
-    ...mapGetters(['imageDomain'])
+    // ...mapGetters(['$domain'])
   },
   methods: {
     // 最近七日书籍
@@ -33,7 +33,7 @@ export default {
       this.$router.push({
         name: 'book',
         params: {
-          bookId
+          id: bookId
         }
       })
     },
@@ -47,7 +47,7 @@ export default {
     // 阅读
     linkToReader (bookId, chapterId) {
       this.$router.push({
-        path: '/reader',
+        path: '/read',
         query: {
           bookId,
           chapterId

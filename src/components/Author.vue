@@ -77,7 +77,7 @@ export default {
   padding: 20px 10px;
   display: flex;
   flex-direction: column;
-  background-color: #12c2e9;
+  background-color: #7AA1D2;
   flex-basis: 30%;
   align-items: center;
   position: relative;
@@ -110,7 +110,7 @@ export default {
   left: 0;
   width: 0;
   height: 100%;
-  background-color: #12c2e9;
+  background-color: #7AA1D2;
   padding: 0 0px;
   transition: all 0.3s ease;
   .author-name {

@@ -23,7 +23,7 @@ export default {
     linkToReader (row) {
       console.log(row)
       this.$router.push({
-        path: '/reader',
+        path: '/read',
         query: {
           book_id: row.book_id,
           chapter_id: row._id
